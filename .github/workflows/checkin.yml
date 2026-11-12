@@ -5,7 +5,9 @@ on:
     # GitHub Actions cron 用 UTC。北京 12:23，一天只触发一次。
     # 容错放在程序内部：网络错误 / 429 / 5xx 自带 3 次退避重试，
     # 9074 等设备限流刻意不重试（连发会延长惩罚窗口），次日自动重来。
-    - cron: '23 4 * * *'
+    - cron: '10 16 * * *'
+    - cron: '10 0 * * *'
+    - cron: '10 8 * * *'
   workflow_dispatch:
     inputs:
       dry_run:
